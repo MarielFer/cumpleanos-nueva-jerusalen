@@ -53,3 +53,18 @@ h1 {
         display: none;
     }
 }
+
+/*para imprimir de manera organizada*/
+@media print {
+    body {
+        background: white;
+    }
+
+    .mes {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+}
+
+
