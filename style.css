@@ -13,16 +13,19 @@ h1 {
 .mes {
     background: white;
     border-radius: 15px;
-    padding: 20px;
+    padding: 12px 18px;
     margin-bottom: 25px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 .mes h2 {
+    margin-top: 0;        
+    margin-bottom: 10px;
     color: #ff6f91;
     border-bottom: 2px solid #ffd6e0;
     padding-bottom: 5px;
 }
+
 
 .cumple {
     margin-top: 10px;
@@ -47,24 +50,24 @@ h1 {
     background-color: #ff4d79;
 }
 
-/* Para que al imprimir no salga el botón */
 @media print {
-    .btn-imprimir {
-        display: none;
-    }
-}
 
-/*para imprimir de manera organizada*/
-@media print {
     body {
         background: white;
     }
 
+    /* No partir cuadros entre páginas */
     .mes {
+        page-break-inside: avoid;
+        break-inside: avoid;
+
         box-shadow: none;
         border: 1px solid #ccc;
         margin-bottom: 20px;
     }
+
+    /* Ocultar botón */
+    .btn-imprimir {
+        display: none;
+    }
 }
-
-
